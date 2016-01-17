@@ -1,5 +1,5 @@
 --TEST--
-Check collecting with object storage
+Check collecting with object storage & array_map
 --SKIPIF--
 <?php if (!extension_loaded("smd")) print "skip"; ?>
 --INI--
@@ -12,7 +12,7 @@ class Request
     protected $storage = [];
 
     function store(array $data) {
-        $this->storage = $data;
+        $this->storage = array_merge($this->storage, $data);
         return $this;
     }
 

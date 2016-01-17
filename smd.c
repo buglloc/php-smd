@@ -282,11 +282,13 @@ PHP_MINIT_FUNCTION(smd)
  */
 PHP_RINIT_FUNCTION(smd)
 {
+    int i;
+
     if (SG(sapi_started) || !SMD_G(enable)) {
         return SUCCESS;
     }
 
-    for (int i = 0; i < _SUPERGLOBALS_COUNT; ++i) {
+    for (i = 0; i < _SUPERGLOBALS_COUNT; ++i) {
         zend_hash_init(&SMD_G(superglobals)[i], 100, NULL, NULL, 1);
     }
 
@@ -302,11 +304,13 @@ PHP_RINIT_FUNCTION(smd)
  */
 PHP_RSHUTDOWN_FUNCTION(smd)
 {
+    int i;
+
     if (!SMD_G(enable)) {
         return SUCCESS;
     }
 
-    for (int i = 0; i < _SUPERGLOBALS_COUNT; ++i) {
+    for (i = 0; i < _SUPERGLOBALS_COUNT; ++i) {
         zend_hash_destroy(&SMD_G(superglobals)[i]);
     }
 

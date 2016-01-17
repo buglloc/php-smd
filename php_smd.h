@@ -20,7 +20,6 @@ extern zend_module_entry smd_module_entry;
 
 ZEND_BEGIN_MODULE_GLOBALS(smd)
     zend_bool enable;
-    zend_bool autostart;
     HashTable superglobals[4];
 ZEND_END_MODULE_GLOBALS(smd)
 

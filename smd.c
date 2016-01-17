@@ -60,7 +60,7 @@ zend_module_entry smd_module_entry = {
     PHP_MINFO(smd),
     SMD_VERSION,
     PHP_MODULE_GLOBALS(smd),
-    NULL, /* PHP_GINIT ss*/
+    PHP_GINIT(smd), /* PHP_GINIT*/
     NULL, /* PHP_GSHUTDOWN */
     NULL,
     STANDARD_MODULE_PROPERTIES_EX
@@ -261,6 +261,12 @@ PHP_FUNCTION(smd_array_merge) {
 }
 /* }}} */
 
+/* {{{ PHP_GINIT_FUNCTION
+ */
+PHP_GINIT_FUNCTION(smd)
+{
+    smd_globals->enable = 1;
+} /* }}} */
 
 /* {{{ PHP_MINIT_FUNCTION
  */

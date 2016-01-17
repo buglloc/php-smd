@@ -31,7 +31,6 @@ ZEND_END_MODULE_GLOBALS(smd)
 #endif
 
 #define SMD_VERSION "0.1"
-#define SMD_FULL_NAME "Show Me Dependency"
 
 #define _GET     0
 #define _POST    1

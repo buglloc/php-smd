@@ -51,7 +51,7 @@ static const zend_function_entry smd_functions[] = {
  */
 zend_module_entry smd_module_entry = {
     STANDARD_MODULE_HEADER,
-    SMD_FULL_NAME,
+    "smd",
     smd_functions,
     PHP_MINIT(smd), /* PHP_MINIT */
     NULL, /* PHP_MSHUTDOWN */
@@ -318,7 +318,7 @@ PHP_RSHUTDOWN_FUNCTION(smd)
 PHP_MINFO_FUNCTION(smd)
 {
     php_info_print_table_start();
-    php_info_print_table_row(2, SMD_FULL_NAME " enabled", SMD_G(enable) ? "enabled": "disabled");
+    php_info_print_table_row(2, "Show Me Dependency enabled", SMD_G(enable) ? "enabled": "disabled");
     php_info_print_table_row(2, "Version", SMD_VERSION);
     php_info_print_table_end();
 

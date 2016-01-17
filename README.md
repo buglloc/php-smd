@@ -8,6 +8,8 @@ The main goal is to identify all dependencies on user input. Soon there will be 
 <?php
 echo $_GET['foo'];
 
+print_r(smd_pump());
+
 /*
 Output: Array
 (

@@ -1,4 +1,4 @@
-# Show Me Dependencies
+# Show Me Dependencies [![Build Status](https://travis-ci.org/buglloc/php-smd.svg?branch=master)](https://travis-ci.org/buglloc/php-smd)
 The main goal is to identify all dependencies on user input. Soon there will be more details;)
 
 **Requires PHP7+** so far.

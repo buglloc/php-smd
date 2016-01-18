@@ -68,6 +68,9 @@ zend_module_entry smd_module_entry = {
 /* }}} */
 
 #ifdef COMPILE_DL_SMD
+#ifdef ZTS
+ZEND_TSRMLS_CACHE_DEFINE();
+#endif
 ZEND_GET_MODULE(smd)
 #endif
 

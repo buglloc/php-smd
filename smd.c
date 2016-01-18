@@ -268,7 +268,7 @@ PHP_FUNCTION(smd_array_merge) {
  */
 PHP_GINIT_FUNCTION(smd)
 {
-#if defined(COMPILE_DL_FILTER) && defined(ZTS)
+#if defined(COMPILE_DL_SMD) && defined(ZTS)
     ZEND_TSRMLS_CACHE_UPDATE();
 #endif
     memset(smd_globals, 0, sizeof(*smd_globals));
